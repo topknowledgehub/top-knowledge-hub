@@ -1,0 +1,540 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+  }
+  p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .icon-wrapper {
+    background-color: #2c7bfe;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #2c7bfe;
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --textBlue: hsl(238, 29%, 16%);
+  --textRed: hsl(14, 88%, 65%);
+  --textVeryDarkBlue: hsl(237, 12%, 33%);
+  --textDarkBlue: hsl(240, 6%, 50%);
+  --gradientViolet: hsl(273, 75%, 66%);
+  --gradientBlue: hsl(240, 73%, 65%);
+  --dividerGray: hsl(240, 5%, 91%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: linear-gradient(var(--gradientViolet), var(--gradientBlue));
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 2.5rem;
+  min-width: 33rem;
+  max-width: 92rem;
+  margin: 0 2.5rem 6rem;
+  padding: 0 2.3rem 4.8rem;
+  background-image: url("https://raw.githubusercontent.com/MizAndhre/FAQ-accordion-card/2ff2a02d093554f14d0390a409e825669313a16e/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 24rem;
+}
+
+.card__box {
+  display: none;
+}
+
+.card__img {
+  position: relative;
+}
+
+.card__img-mobile {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 24rem;
+}
+
+.card__img-desktop {
+  display: none;
+}
+
+.card__text {
+  margin-top: 12.9rem;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  font-size: 3.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--textBlue);
+}
+
+.accordion__item {
+  border-bottom: 0.1rem solid var(--dividerGray);
+}
+
+.accordion__item h2 {
+  margin: 0;
+}
+
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.45rem 0.5rem;
+  border: none;
+  background: none;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.4rem;
+  color: var(--textVeryDarkBlue);
+  text-align: left;
+  transition: all 300ms ease-in-out;
+}
+
+.accordion__title:focus,
+.accordion__title:focus-visible {
+  z-index: 3;
+  outline: solid rgba(255, 146, 113, 0.5);
+  box-shadow: 0 0 0.4rem 0.4rem rgba(161, 72, 45, 0.25);
+  border-radius: 0.3rem;
+}
+
+.accordion__title:hover {
+  cursor: pointer;
+  color: var(--textRed);
+}
+
+.accordion__title::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 0.6rem;
+  background-image: url("https://raw.githubusercontent.com/MizAndhre/FAQ-accordion-card/2ff2a02d093554f14d0390a409e825669313a16e/images/icon-arrow-down.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 300ms ease-in-out;
+}
+
+.accordion__text {
+  text-align: left;
+  padding: 0.5rem 3rem 2.2rem 0.5rem;
+  line-height: 1.5;
+  color: var(--textDarkBlue);
+}
+
+/* JS Classes */
+.accordion__title.open {
+  font-weight: 700;
+  color: var(--textBlue);
+}
+
+.accordion__title.open::after {
+  transform: rotate(180deg);
+}
+
+.accordion__collapse.collapse {
+  display: none;
+}
+
+.accordion__collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease;
+}
+
+.accordion__collapse.open {
+  display: block;
+}
+
+/* DESKTOP STYLE */
+@media (min-width: 56em) {
+  .card {
+    position: relative;
+    display: flex;
+    padding: 6.1rem 9.4rem 8.4rem 0;
+    margin: 0;
+    background-image: url("https://raw.githubusercontent.com/MizAndhre/FAQ-accordion-card/2ff2a02d093554f14d0390a409e825669313a16e/images/bg-pattern-desktop.svg");
+    background-size: 100%;
+    /* background-position: -73rem center; */
+    background-position: -53rem -28rem;
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 57%;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .card__img,
+  .card__text {
+    flex: 1;
+  }
+
+  .card__img {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 9.2rem;
+  }
+
+  .card__img-mobile {
+    display: none;
+  }
+
+  .card__img-desktop {
+    display: block;
+    max-width: 47.2rem;
+    transform: translateX(-8.4rem);
+  }
+
+  .card__text {
+    margin-top: 0;
+  }
+
+  h1 {
+    padding-bottom: 2.1rem;
+    text-align: left;
+  }
+
+  .accordion__title {
+    font-size: 1.5rem;
+  }
+
+  .accordion__text {
+    line-height: 1.4;
+    padding: 0.5rem 3rem 2rem 0.5rem;
+  }
+}
+
+/* FOOTER */
+.attribution {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  color: var(--dividerGray);
+}
+
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  color: var(--textRed);
+}
+
+.icons i {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family : Verdana,Tahoma, sans-serif;
+}
+
+.box{
+  width: 380px;
+  height: 500px;
+  background-color:rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.box img{
+width:100px;
+  margin-top:-50px ;
+}
+
+.header {
+width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+display: inline-flex;
+  padding-top: 20px;
+  padding-bottom: 0;
+justify-content: space-between;
+}
+
+.header a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+display: inline-flex;
+  padding-left: 25px;
+  padding-right: 25px;
+justify-content: center;
+  cursor:pointer;
+}
+
+.header .active {
+  color: #df80ff;
+font-weight: bold;
+position: relative;
+}
+
+.header .active:after {
+position: absolute;
+  border: none;
+content: "";
+}
+
+#errorMsg{
+  color:red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+
+}
+
+.content{
+  display: inline-flex;
+  overflow: hidden;
+}
+
+form {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+flex-shrink: 0;
+flex-direction: column;
+transition: right 0.5s;
+}
+
+.login a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.extend form {
+right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+display:block;
+  position: relative;
+border: 4px solid #ffffff;
+padding: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+ box-sizing: border-box;
+  font-size: 17px;
+  outline: none;
+}
+
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+  border: 4px solid #df80ff;
+
+}
+
+input[type=submit]{
+  display:block;
+  position: relative;
+  border: 3px solid #df80ff;
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 25px;
+  background-color:#600080 ;
+  text-align:center;
+  font-size: 20px;
+  color: #ffffff;
+cursor:pointer;
+  outline: none;
+}
+
+input[type=submit]:hover{
+ background-color:#ffffff;
+   color: #000000;
+   font-weight: bold;
+}
+input[type=checkbox]{
+  background-color:#df80ff;
+}
+#check{
+  margin-top: 10px;
+  text-align: left;
+  color: #ffffff;
+  font-size: 15px;
+}
